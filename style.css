@@ -58,7 +58,7 @@ body {
     margin-top: 80px; 
     position: absolute;
     left: 50%; 
-    transform: translateX(-60%); 
+    transform: translateX(-50%); 
 }
 
 form {
