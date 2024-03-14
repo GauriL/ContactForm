@@ -1,3 +1,7 @@
+@viewport{
+	width:1920px;
+	height: 1080px;
+}
 body {
     font-family: 'Montserrat', sans-serif; 
     font-weight: 400; 
@@ -19,6 +23,7 @@ body {
 }
 .description {
     font-size: 25px; 
+	font-weight:regular;
     line-height: 30px;
 	color: #202E4B;	
 	margin-bottom: 50px;
@@ -32,6 +37,8 @@ body {
 	line-height: 24px;
 	color: #202E4B;
 	text-align: left;
+	width: 873px;
+	height: 24px;
 }
 .container {
     margin: auto; 
@@ -40,16 +47,18 @@ body {
 .btn-primary {
     font-family: 'Helvetica neue', sans-serif; 
     font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 25px;
+    line-height: 30px;
     background-color: #9AC93C; 
     border-color: #9AC93C; 
+	border-radius:12px;
     color: #fff;
-    width: 257px;
-    margin-top: 90px; 
+    width: 275px;
+	height: 55px;
+    margin-top: 80px; 
     position: absolute;
     left: 50%; 
-    transform: translateX(-50%); 
+    transform: translateX(-60%); 
 }
 
 form {
@@ -86,7 +95,7 @@ form {
   right: 4px; 
   width: 33px; 
   height: 33px; 
-  background-image: url('https://raw.githubusercontent.com/GauriL/ContactForm/master/dropdown-arrow-new.svg');
+  background-image: url('https://raw.githubusercontent.com/GauriL/ContactForm/master/dropdown-arrow-l.svg');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -107,7 +116,8 @@ form {
 }
 
 .form-control::placeholder {
-    color: #737373; 
+    color: #202E4B; 
+	font-weight: regular;
     font-size: 20px;
     line-height: 24px;
 }
@@ -132,28 +142,29 @@ form {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-left: auto; /* Adjust margin to center container */
-        margin-right: auto; /* Adjust margin to center container */
-        max-width: 390px; /* Limit container width */
-        max-height: 1288px; /* Limit container height */
-        overflow: auto; /* Enable scrolling if content exceeds container dimensions */
+        margin-left: auto; 
+        margin-right: auto; 
+        max-width: 390px;
+        max-height: 1288px;
+        overflow: auto;
     }
 
     form {
         padding: 30px;
         margin: 6px;
-        width: 100%;
+        width: 330px;
+		height:494px;
     }
-
+	
     .title-form {
         font-weight: bold; 
         font-size: 27px;
         line-height: 33px;
         color: #202E4B;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         text-align: center;
-        max-width: 330px; /* Limit title width */
-        height: auto; /* Allow title height to adjust based on content */
+        width: 330px;
+        height: 33px;
     }
 
     .description {
@@ -161,10 +172,10 @@ form {
         font-weight: regular;
         line-height: 19px;
         color: #202E4B;    
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         text-align: center;
-        max-width: 330px; /* Limit description width */
-        height: auto; /* Allow description height to adjust based on content */
+        max-width: 330px; 
+        height: 57; 
     }
 
     .info {
@@ -173,11 +184,13 @@ form {
         line-height: 15px;
         color: #202E4B;
         text-align: left;
+		width: 283px;
+		height:30px;
     }
 
     .form-control::placeholder {
         font-weight: regular;
-        color: #737373; 
+        color: #202E4B; 
         font-size: 16px;
         line-height: 19px;
     }
@@ -190,11 +203,45 @@ form {
         background-color: #9AC93C; 
         border-color: #9AC93C; 
         color: #fff;
-        width: 190px; 
-        margin-top: 45px; 
+        width: 178px; 
+		height:32px;
+        margin-top: 4px; 
         margin-bottom: 20px;
 		transform: translateX(-50%);
     }
+	.input-wrapper {
+	  position: relative;
+	  display: inline-block;
+	  width:100%;
+	  margin-bottom:15px;
+	}
+
+	.input-wrapper::after {
+	  content: '';
+	  position: absolute;
+	  top: calc(50% - 12px); 
+	  right: 2px; 
+	  width: 25px; 
+	  height: 25px; 
+	  background-image: url('https://raw.githubusercontent.com/GauriL/ContactForm/master/dropdown-arrow-l.svg');
+	  background-size: contain;
+	  background-repeat: no-repeat;
+	  pointer-events: none;
+	  z-index: 1;
+	}
+
+	.input-wrapper::before {
+		content: '';
+		position: absolute;
+		top: calc(50% - 14px);
+		right: 26px;
+		bottom: 0;
+		height: 29px;
+		width: 0.5px; 
+		background-color: #707070;
+		z-index: 0; 
+		opacity: 0.4;
+	}
 
     .mb-3.row {
         flex-direction: column;  
